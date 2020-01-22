@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"	 
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+	android:id="@+id/multiplayer_game_layout">
+
+	<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:textAppearance="?android:attr/textAppearanceMedium"
+			android:text="Make Discoverable"
+			android:id="@+id/btnMakeDisco" android:clickable="true" android:layout_gravity="top|right"/>
+
+	<LinearLayout
+			android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		android:gravity="center" android:orientation="vertical" android:measureWithLargestChild="false"
+			android:weightSum="100">
+		<LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="0dp" android:layout_weight="15">
+            <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+					android:layout_gravity="left|bottom"
+                    android:layout_marginLeft="20dp" android:layout_marginTop="20dp">
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="TIMER"
+                        android:id="@+id/textView4" android:layout_column="4" android:gravity="top|left"
+                        android:textColor="#ff8e8788" android:textStyle="bold" android:textSize="15sp"/>
+                <TextView
+                        android:id="@+id/time"
+                        android:text="0"
+                        android:textSize="35sp"
+                        android:textStyle="bold"
+                        android:textColor="#fffff6f6"
+                        android:shadowColor="#ff9d9b87"
+                        android:shadowRadius="1.5"
+                        android:shadowDx="3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10sp"
+                        android:shadowDy="3"
+                        android:paddingBottom="10dp"
+                        android:gravity="bottom|center_horizontal"
+                        android:paddingTop="10sp"
+                        android:layout_column="21"
+                        android:layout_gravity="center_horizontal"/>
+			</FrameLayout>
+			<TextView
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:textAppearance="?android:attr/textAppearanceLarge"
+					android:text="Your Turn"
+					android:id="@+id/turn_label" android:layout_gravity="bottom" android:layout_marginBottom="5dp"
+					android:layout_marginLeft="20dp" android:textSize="20sp"/>
+		</LinearLayout>
+		<FrameLayout
+			android:layout_width="match_parent"
+			android:layout_height="0dp"
+			android:layout_weight="70" android:id="@+id/board_frame" >
+
+			<com.thesis.ArdRi.board.BoardView
+					android:id="@+id/boardView"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_gravity="center" />
+
+		</FrameLayout>
+		<LinearLayout
+				android:orientation="horizontal"
+				android:layout_width="fill_parent"
+				android:layout_height="0dp"
+				android:layout_weight="10" android:gravity="top|center" android:paddingLeft="20dp"
+				android:paddingRight="20dp">
+			<Button
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="Restart"
+					android:id="@+id/btnRestart" style="@style/customBtnStyle" android:layout_marginRight="20dp"
+					android:layout_weight="0.21" android:visibility="gone"/>
+			<Button
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="DRAW"
+					android:id="@+id/btnDraw" android:layout_weight="0.21"
+					android:gravity="center"
+					android:padding="10dp" android:layout_marginRight="20dp"
+					style="@style/customBtnStyle" android:visibility="gone"/>
+			<Button
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="Chat"
+					android:id="@+id/btnChat" android:layout_weight="0.24"
+					android:gravity="center"
+					android:padding="10dp"
+					style="@style/customBtnStyle"/>
+		</LinearLayout>
+	</LinearLayout>
+
+	<LinearLayout
+			android:id="@+id/notification_container"
+			android:animateLayoutChanges="true"
+			android:orientation="vertical"
+			android:layout_gravity="top|right"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"/>
+
+</FrameLayout>

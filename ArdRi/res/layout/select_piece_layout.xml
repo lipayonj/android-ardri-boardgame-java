@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"  android:gravity="center_vertical"
+              android:theme="@style/Theme.CustomTranslucent" android:background="@drawable/trans_back">
+
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" android:gravity="center_vertical" android:id="@+id/select_piece_view"
+            android:visibility="invisible">
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Attacker"
+                android:id="@+id/select_attacker" android:background="@drawable/rounded_main_menu_options"
+                android:padding="20dp" android:gravity="center|center_horizontal"
+                android:layout_gravity="center_horizontal" android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp" style="@style/MenuFont"/>
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Defender"
+                android:id="@+id/select_defender" android:background="@drawable/rounded_main_menu_options"
+                android:padding="20dp" android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="50dp" android:layout_marginRight="50dp" android:layout_marginTop="10dp"
+                android:gravity="center_horizontal" style="@style/MenuFont"/>
+    </LinearLayout>
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:layout_gravity="center"
+            android:id="@+id/select_loading_llayout">
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Waiting For Connection"
+                android:id="@+id/select_piece_loading_label"/>
+        <ProgressBar
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/progressBar" android:layout_gravity="center" android:indeterminate="false"/>
+    </LinearLayout>
+
+</FrameLayout>

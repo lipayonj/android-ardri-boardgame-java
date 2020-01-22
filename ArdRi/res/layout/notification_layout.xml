@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:padding="5dp" android:id="@+id/notification_frame" android:theme="@style/Theme.CustomTranslucent"
+              >
+
+    <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" android:background="@drawable/rounded_notification"
+            android:layout_margin="3dp">
+        <ImageButton
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:id="@+id/close_notification" android:src="@drawable/close_chat" android:background="@null"
+                android:layout_gravity="top|right"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Notification Type"
+                android:id="@+id/notification_type" android:layout_gravity="left|top" android:layout_marginRight="30dp"
+                android:layout_marginTop="5dp" android:layout_marginLeft="5dp"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Text"
+                android:id="@+id/notification_message" android:textSize="20dp" android:textIsSelectable="false"
+                android:layout_gravity="bottom|center"
+                android:gravity="fill_horizontal|center_vertical|center" android:layout_marginTop="20dp"
+                android:layout_marginBottom="5dp" android:layout_marginLeft="5dp" android:layout_marginRight="5dp"/>
+    </FrameLayout>
+
+</LinearLayout>

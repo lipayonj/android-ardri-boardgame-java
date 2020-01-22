@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="fill_parent"
+             android:layout_height="fill_parent"
+             android:id="@+id/content_fragment"
+             android:background="#ff000000">
+
+    <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" android:padding="20dp" android:layout_gravity="top">
+        <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:id="@+id/imgExit" android:layout_gravity="bottom|right" android:src="@drawable/exit"
+                android:clickable="true" android:onClick="exitGame"/>
+        <ImageButton
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:id="@+id/imgAbout" android:layout_gravity="left"
+                android:scaleType="fitXY"
+                android:background="@null" android:src="@drawable/about" android:onClick="clickAbout"/>
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="ArdRi"
+                android:id="@+id/logo" android:layout_gravity="center_horizontal" android:textColor="#ffffa507"
+                android:textSize="100sp" android:gravity="center" android:layout_marginTop="80dp"
+                android:background="@drawable/rounded_main_menu_options" android:onClick="clickAbout"
+                android:clickable="true"/>
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:measureWithLargestChild="false"
+                android:id="@+id/main_menu_cont"
+                android:layout_gravity="center" android:layout_marginTop="55dp">
+
+            <TextView
+                    android:text="@string/passPlay"
+                    android:layout_gravity="center"
+                    android:id="@+id/passPlay"
+                    android:clickable="true"
+                    style="@style/MenuFont" android:background="@drawable/rounded_main_menu_options" android:textStyle="bold"
+                    android:gravity="center" android:layout_height="50dp" android:layout_width="250dp"
+                    android:layout_marginTop="10dp" android:onClick="clickPassPlay"/>
+
+            <TextView
+                    android:text="@string/multiplayer"
+                    android:id="@+id/multiplayer"
+                    android:clickable="true"
+                    style="@style/MenuFont" android:background="@drawable/rounded_main_menu_options" android:textStyle="bold"
+                    android:gravity="center" android:layout_gravity="center" android:layout_height="50dp"
+                    android:layout_width="250dp" android:layout_marginTop="10dp"
+                    android:onClick="clickMultiplayer"/>
+
+            <TextView
+                    android:text="How To Play"
+                    android:id="@+id/howToPlay"
+                    android:clickable="true"
+                    style="@style/MenuFont" android:background="@drawable/rounded_main_menu_options" android:textStyle="bold"
+                    android:gravity="center" android:layout_gravity="center" android:layout_height="50dp"
+                    android:layout_width="250dp" android:layout_marginTop="10dp" android:onClick="clickHowToPlay"/>
+
+        </LinearLayout>
+    </FrameLayout>
+    <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" android:layout_gravity="right|center_vertical">
+    </RelativeLayout>
+</FrameLayout>

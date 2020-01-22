@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:id="@+id/chat_linear_layout"
+              android:weightSum="1"
+
+              android:alpha="100" android:gravity="center|clip_vertical"
+              android:paddingRight="10dp" android:paddingTop="50dp" android:paddingLeft="10dp"
+              android:paddingBottom="3dp">
+
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent" android:background="@drawable/rounded_corner"
+            android:weightSum="100">
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"  android:weightSum="50"
+                android:paddingTop="5dp" android:paddingRight="10dp">
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Connected To: "
+                    android:id="@+id/chtConnectedTo" android:textSize="15dp"
+                    android:gravity="left|center_vertical" android:layout_marginTop="10dp"/>
+            <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:id="@+id/chat_connected_to" android:layout_weight="50" android:layout_marginTop="10dp"
+                    android:gravity="left|center_vertical"/>
+            <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"  android:layout_marginTop="5dp"
+                    android:layout_gravity="top|right">
+                <ImageButton
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:id="@+id/closeChat"
+                        android:src="@drawable/close_chat" android:background="@null"
+                        android:cropToPadding="false"
+                        android:scaleType="fitXY"
+                        android:layout_gravity="top|right"/>
+            </FrameLayout>
+        </LinearLayout>
+        <ListView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:id="@+id/chatConversation" android:layout_gravity="center_horizontal" android:layout_weight="100"
+                android:choiceMode="none" android:paddingTop="10dp" android:paddingBottom="10dp"
+                android:layout_marginRight="20dp" android:layout_marginLeft="10dp"/>
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp" android:layout_gravity="center_horizontal" android:weightSum="10"
+                android:layout_marginRight="10dp"  android:paddingRight="20dp">
+            <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/chatMsg"
+                    android:layout_gravity="left|bottom" android:background="@drawable/rounded_control"
+                    android:gravity="left" android:layout_marginLeft="10dp"
+                    android:textColor="#ffffffff" android:paddingTop="15dp" android:maxLength="40"
+                    android:editable="false"
+                    android:contentDescription="Message" android:singleLine="true"
+                    android:focusable="true" android:inputType="text" android:layout_weight="6"
+                    android:hint="Message" android:clickable="true" android:textSize="12sp" android:textStyle="bold"/>
+            <Button
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:text="Send"
+                    android:id="@+id/chatSendMsg"
+                    android:background="@drawable/rounded_control" android:gravity="center_vertical|center"
+                    android:paddingTop="15dp" android:paddingRight="20dp" android:textColor="#ffffffff"
+                    android:layout_marginLeft="10dp" android:layout_weight="4"
+                    android:textSize="12sp" android:textStyle="bold"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

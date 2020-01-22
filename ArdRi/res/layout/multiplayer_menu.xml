@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="fill_parent"
+             android:layout_height="fill_parent"
+             android:id="@+id/multiplayer_content_fragment"
+             android:background="#ff000000" android:padding="50dp" android:paddingTop="10dp">
+
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="241dp"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center">
+
+        <TextView
+                android:text="Create Game"
+                android:id="@+id/createGame"
+                android:clickable="true"
+                style="@style/MenuFont" android:background="@drawable/rounded_main_menu_options"
+                android:paddingTop="20dp" android:paddingBottom="20dp" android:layout_height="70dp"
+                android:layout_width="match_parent"/>
+
+        <TextView
+                android:id="@+id/joinGame"
+                android:clickable="true"
+                style="@style/MenuFont" android:text="Join Game"
+                android:background="@drawable/rounded_main_menu_options" android:paddingTop="20dp"
+                android:paddingBottom="20dp" android:layout_height="70dp" android:layout_marginTop="50dp"
+                android:layout_width="match_parent"/>
+
+    </LinearLayout>
+</FrameLayout>
